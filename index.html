@@ -6,7 +6,6 @@
 <script type="text/javascript" src="../tool.js"></script>
 <script type="text/javascript" src="../base.js"></script>
 <script type="text/javascript" src="../ajax.js"></script>
-<script type="text/javascript" src="../json2.js"></script>
 <script type="text/javascript" src="../base_drag.js"></script>
 <script type="text/javascript" src="../base_form.js"></script>
 <script type="text/javascript" src="index.js"></script>
@@ -14,21 +13,19 @@
 </head>
 <body>
 
-<div id="header_bg">
-	<div id="header">
-		<div class="logo"><img src="images/logo.gif" alt="" /></div>
-		<div class="member">个人中心
-			<ul class="member_ul">
-				<li><a href="###">发文</a></li>
-				<li><a href="###">换肤</a></li>
-				<li><a href="###">帮助</a></li>
-				<li><a href="###">退出</a></li>
-			</ul>
-		</div>
-		<div class="reg">注册</div>
-		<div class="login">登录</div>
-		<div class="info"></div>
+<div id="header">
+	<div class="logo"><img src="images/logo.gif" alt="" /></div>
+	<div class="member">个人中心
+		<ul class="member_ul">
+			<li><a href="###">设置</a></li>
+			<li><a href="###">换肤</a></li>
+			<li><a href="###">帮助</a></li>
+			<li><a href="###">退出</a></li>
+		</ul>
 	</div>
+	<div class="reg">注册</div>
+	<div class="login">登录</div>
+	<div class="info"></div>
 </div>
 
 <div id="reg">
@@ -112,25 +109,6 @@
 	</form>
 </div>
 
-<div id="blog">
-	<h2><img src="images/close.png" alt="" class="close" />发表博文</h2>
-	<div class="info"></div>
-	<form name="blog">
-	<dl>
-		<dd>标　　题： <input type="text" name="title" class="title" /> (*不可为空)</dd>
-		<dd><span style="vertical-align:85px">内　　容：</span> <textarea name="content" class="content"></textarea> <span style="vertical-align:45px">(*不可为空)</span></dd>				
-		<dd style="padding:10px 0 0 86px;"><input type="button" name="sub" class="submit" /></dd>
-	</dl>
-	</form>
-</div>
-
-<div id="skin">
-	<h2><img src="images/close.png" alt="" class="close" />更换皮肤</h2>
-	<div class="skin_bg">
-
-	</div>
-</div>
-
 <div id="nav">
 	<ul class="about">
 		<li></li>
@@ -186,7 +164,7 @@
 		</ul>
 	</div>
 	<div id="index">
-		
+		index
 	</div>
 	<div id="banner">
 		<img src="images/banner1.jpg" alt="轮播器第一张" />
@@ -263,11 +241,6 @@
 
 		
 	</div>
-	
-	<div id="footer">
-		<p>瓢城Web俱乐部 http://www.ycku.com</p>
-		<p>CopyRight All Reset. xxx 苏备案号：123456</p>
-	</div>
 </div>
 
 <div id="share">
@@ -316,6 +289,9 @@
 <div id="screen"></div>
 
 <div id="test" style="clear:both;"></div>
+
+
+
 
 </body>
 </html>
