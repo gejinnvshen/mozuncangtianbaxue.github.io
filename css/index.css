@@ -1,0 +1,120 @@
+
+body{
+	width:1000px;
+	margin:0 auto;
+}
+#header{
+	width:1000px;
+	height:132px;
+	margin:0 auto;
+	background:#ffffcd;
+	border-radius:5px;
+}
+.logo{
+	width:500px;
+	height: 132px;
+	float:left;
+}
+#header .logo a{
+	display:block;
+	height:132px;
+}
+#header .logo a img{
+	padding-top:20px;
+	padding-left:10px;
+}
+#header .logo_text{
+	width:500px;
+	height:132px;
+	float:right;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#header .logo_text p{
+	color:#646060;
+	padding: 5px;	
+	font-size:15px;
+	font-weight:900;
+	font-family: sans-serif;
+}
+#nav{
+	background: #AAAAAA;
+	margin:5px 0;
+	width:1000px;
+	height:50px;
+	border-radius:5px;
+}
+#nav ul li{
+	width:140px;
+	background:#AAAAAA;
+	float:left;
+	line-height: 50px;
+	font-size:16px;
+	font-family: sans-serif;
+	margin-left:2.5px;
+	border-radius:5px;
+	
+}
+#nav ul li:hover{
+	background:#FF8888;
+}
+#nav ul li a{
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	text-align: center;
+}
+#nav ul .shouye{
+	background:#FF8888;
+}
+#banner{
+	width:1000px;
+	height: 500px;
+}
+#banner .left{
+	width:620px;
+	float:left;
+}
+#banner .left .left-inner{
+	position:relative;
+}
+#banner .left .left-inner img{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#banner .left .panagation{
+	width:110px;
+	float:right;
+	margin-right:20px;
+}
+#banner .left .panagation img{
+	width:100px;
+	height: 50px;
+	margin:5px;
+	cursor:pointer;
+}
+#banner .right{
+	width:380px;
+	height:272px;
+	margin-top:13px;
+	float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
