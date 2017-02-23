@@ -1,342 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta charset="utf-8">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>µÚ34ÕÂ ÏîÄ¿1-²©¿ÍÇ°¶Ë£ºajax</title>
-<script type="text/javascript" src="../tool.js"></script>
-<script type="text/javascript" src="../base.js"></script>
-<script type="text/javascript" src="../ajax.js"></script>
-<script type="text/javascript" src="../json2.js"></script>
-<script type="text/javascript" src="../base_drag.js"></script>
-<script type="text/javascript" src="../base_form.js"></script>
-<script type="text/javascript" src="index.js"></script>
-<link rel="stylesheet" type="text/css" href="index.css" />
+	<title>è‚–æŒ¯åŽçš„ä¸ªäººåšå®¢</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-
-<div id="header_bg">
 	<div id="header">
-		<div class="logo"><img src="images/logo.gif" alt="" /></div>
-		<div class="member">¸öÈËÖÐÐÄ
-			<ul class="member_ul">
-				<li><a href="###">·¢ÎÄ</a></li>
-				<li><a href="###">»»·ô</a></li>
-				<li><a href="###">°ïÖú</a></li>
-				<li><a href="###">ÍË³ö</a></li>
-			</ul>
+		<div class="logo">
+			<a href="index.html"><img src="./images/logo.png" height="87"></a>
 		</div>
-		<div class="reg">×¢²á</div>
-		<div class="login">µÇÂ¼</div>
-		<div class="info"></div>
+		<div class="logo_text">
+			<p>æœ‰èƒ½åŠ›çš„äººå½±å“åˆ«äººï¼Œæ²¡èƒ½åŠ›çš„äººå—äººå½±å“</p>
+			<p>äººç”Ÿå°±åƒä¸€æ¯èŒ¶ï¼Œä¸ä¼šè‹¦ä¸€è¾ˆå­ï¼Œä½†æ€»ä¼šè‹¦ä¸€é˜µå­ã€‚</p>
+		</div>
 	</div>
-</div>
 
-<div id="reg">
-	<h2><img src="images/close.png" alt="" class="close" />»áÔ±×¢²á</h2>
-	<form name="reg">
-	<dl>
-		<dd>ÓÃ »§ Ãû£º <input type="text" name="user" class="text" />
-			<span class="info info_user">ÇëÊäÈëÓÃ»§Ãû£¬2~20Î»£¬ÓÉ×ÖÄ¸¡¢Êý×ÖºÍÏÂ»®Ïß×é³É£¡</span>
-			<span class="error error_user">ÊäÈë²»ºÏ·¨£¬ÇëÖØÐÂÊäÈë£¡</span>
-			<span class="succ succ_user">¿ÉÓÃ</span>
-			<span class="loading">ÕýÔÚ¼ì²âÓÃ»§Ãû...</span>
-		</dd>
-		<dd>ÃÜ¡¡¡¡Âë£º <input type="password" name="pass" class="text" />
-			<span class="info info_pass">
-				<p>°²È«¼¶±ð£º<strong class="s s1">¡ö</strong><strong class="s s2">¡ö</strong><strong class="s s3">¡ö</strong> <strong class="s s4" style="font-weight:normal;"></strong></p>
-				<p><strong class="q1" style="font-weight:normal;">¡ð</strong> 6-20 ¸ö×Ö·û</p>
-				<p><strong class="q2" style="font-weight:normal;">¡ð</strong> Ö»ÄÜ°üº¬´óÐ¡Ð´×ÖÄ¸¡¢Êý×ÖºÍ·Ç¿Õ¸ñ×Ö·û</p>
-				<p><strong class="q3" style="font-weight:normal;">¡ð</strong> ´ó¡¢Ð¡Ð´×ÖÄ¸¡¢Êý×Ö¡¢·Ç¿Õ×Ö·û£¬2ÖÖÒÔÉÏ</p>
-			</span>
-			<span class="error error_pass">ÊäÈë²»ºÏ·¨£¬ÇëÖØÐÂÊäÈë£¡</span>
-			<span class="succ succ_pass">¿ÉÓÃ</span>
-		</dd>
-		<dd>ÃÜÂëÈ·ÈÏ£º <input type="password" name="notpass" class="text" />
-			<span class="info info_notpass">ÇëÔÙÒ»´ÎÊäÈëÃÜÂë£¡</span>
-			<span class="error error_notpass">ÃÜÂë²»Ò»ÖÂ£¬ÇëÖØÐÂÊäÈë£¡</span>
-			<span class="succ succ_notpass">¿ÉÓÃ</span>
-		</dd>
-		<dd><span style="vertical-align:-2px">Ìá¡¡¡¡ÎÊ£º</span> <select name="ques">
-									<option value="0">- - - - ÇëÑ¡Ôñ - - - -</option>
-									<option value="1">- - Äú×îÏ²»¶³ÔµÄ²Ë</option>
-									<option value="2">- - ÄúµÄ¹·¹·µÄÃû×Ö</option>
-									<option value="3">- - ÄúµÄ³öÉúµØ</option>
-									<option value="4">- - Äú×îÏ²»¶µÄÃ÷ÐÇ</option>
-								  </select>
-			<span class="error error_ques">ÉÐÎ´Ñ¡ÔñÌáÎÊ£¬ÇëÑ¡Ôñ£¡</span>				  
-		</dd>
-		<dd>»Ø¡¡¡¡´ð£º <input type="text" name="ans" class="text" />
-			<span class="info info_ans">ÇëÊäÈë»Ø´ð£¬2~32Î»£¡</span>
-			<span class="error error_ans">»Ø´ð²»ºÏ·¨£¬ÇëÖØÐÂÊäÈë£¡</span>
-			<span class="succ succ_ans">¿ÉÓÃ</span>
-		</dd>
-		<dd>µç×ÓÓÊ¼þ£º <input type="text" name="email" class="text" autocomplete="off" />
-			<span class="info info_email">ÇëÊäÈëµç×ÓÓÊ¼þ£¡</span>
-			<span class="error error_email">ÓÊ¼þ²»ºÏ·¨£¬ÇëÖØÐÂÊäÈë£¡</span>
-			<span class="succ succ_email">¿ÉÓÃ</span>
-			<ul class="all_email">
-				<li><span></span>@qq.com</li>				
-				<li><span></span>@163.com</li>
-				<li><span></span>@sohu.com</li>
-				<li><span></span>@sina.com.cn</li>
-				<li><span></span>@gmail.com</li>
-			</ul>
-		</dd>
-		<dd class="birthday"><span style="vertical-align:-2px">Éú¡¡¡¡ÈÕ£º</span> <select name="year">
-									<option value="0">- Äê -</option>
-								  </select> -
-								  <select name="month">
-									<option value="0">- ÔÂ -</option>
-								  </select> -
-								  <select name="day">
-									<option value="0">- ÈÕ -</option>
-								  </select>
-			<span class="error error_birthday">ÉÐÎ´È«²¿Ñ¡Ôñ£¬ÇëÑ¡Ôñ£¡</span>	  
-		</dd>
-		<dd style="height:105px;"><span style="vertical-align:85px">±¸¡¡¡¡×¢£º</span> <textarea name="ps"></textarea></dd>			
-		<dd style="display:block;" class="ps">»¹¿ÉÒÔÊäÈë<strong class="num">200</strong>×Ö</dd>	
-		<dd style="display:none;" class="ps">ÒÑ³¬¹ý<strong class="num"></strong>×Ö£¬<span class="clear">ÇåÎ²</span></dd>		
-		<dd style="padding:0 0 0 80px;"><input type="button" name="sub" class="submit" /></dd>
-	</dl>
-	</form>
-</div>
-
-<div id="login">
-	<h2><img src="images/close.png" alt="" class="close" />ÍøÕ¾µÇÂ¼</h2>
-	<form name="login">
-	<div class="info"></div>
-	<div class="user">ÕÊ ºÅ£º<input type="text" name="user" class="text" /></div>
-	<div class="pass">ÃÜ Âë£º<input type="password" name="pass" class="text" /></div>
-	<div class="button"><input type="button" name="sub" class="submit" value="" /></div>
-	<div class="other">×¢²áÐÂÓÃ»§ | Íü¼ÇÃÜÂë£¿</div>
-	</form>
-</div>
-
-<div id="blog">
-	<h2><img src="images/close.png" alt="" class="close" />·¢±í²©ÎÄ</h2>
-	<div class="info"></div>
-	<form name="blog">
-	<dl>
-		<dd>±ê¡¡¡¡Ìâ£º <input type="text" name="title" class="title" /> (*²»¿ÉÎª¿Õ)</dd>
-		<dd><span style="vertical-align:85px">ÄÚ¡¡¡¡ÈÝ£º</span> <textarea name="content" class="content"></textarea> <span style="vertical-align:45px">(*²»¿ÉÎª¿Õ)</span></dd>				
-		<dd style="padding:10px 0 0 86px;"><input type="button" name="sub" class="submit" /></dd>
-	</dl>
-	</form>
-</div>
-
-<div id="skin">
-	<h2><img src="images/close.png" alt="" class="close" />¸ü»»Æ¤·ô</h2>
-	<dl>
-		<dt><img src="images/small_bg1.png" alt="" /></dt>
-		<dd>Æ¤·ô1</dd>
-	</dl>
-	<dl>
-		<dt><img src="images/small_bg2.png" alt="" /></dt>
-		<dd>Æ¤·ô2</dd>
-	</dl>
-	<dl>
-		<dt><img src="images/small_bg3.png" alt="" /></dt>
-		<dd>Æ¤·ô3</dd>
-	</dl>
-	<dl>
-		<dt><img src="images/small_bg4.png" alt="" /></dt>
-		<dd>Æ¤·ô4</dd>
-	</dl>
-	<dl>
-		<dt><img src="images/small_bg5.png" alt="" /></dt>
-		<dd>Æ¤·ô5</dd>
-	</dl>
-	<dl>
-		<dt><img src="images/small_bg6.png" alt="" /></dt>
-		<dd>Æ¤·ô6</dd>
-	</dl>
-</div>
-
-<div id="nav">
-	<ul class="about">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-	<ul class="black">
-		<li>Ê×Ò³</li>
-		<li>²©ÎÄÁÐ±í</li>
-		<li>¾«²ÊÏà²á</li>
-		<li>¶¯¸ÐÒôÀÖ</li>
-		<li>¹ØÓÚÎÒ</li>
-	</ul>
-	<div class="nav_bg">
-		<ul class="white">
-			<li>Ê×Ò³</li>
-			<li>²©ÎÄÁÐ±í</li>
-			<li>¾«²ÊÏà²á</li>
-			<li>¶¯¸ÐÒôÀÖ</li>
-			<li>¹ØÓÚÎÒ</li>
-		</ul>
-	</div>	
-</div>
-
-
-<div id="main">
-	<div id="sidebar">
-		<h2>½ÌÓý²©ÎÄ1</h2>
+	<div id="nav">
 		<ul>
-			<li><a href="###">¿¿×Ô¼º95 ºóÅ®Éú±»16 Ëù¹úÍâÃûÐ£Â¼È¡</a></li>
-			<li><a href="###">00 ºóµÄ³É³¤·³ÄÕ£ºÑ¹Á¦¾Þ´ó³ÉÒþÐÎÉ±ÊÖ</a></li>
-			<li><a href="###">Ò»Äê×ÔÑ§MIT µÄ33 ÃÅ¿Î? ·è¿ñÑ§Ï°·½·¨</a></li>
-			<li><a href="###">ÉêÇë¸°ÃÀ¶ÁÑÐÈËÊýÏÂ½µ5% 7 ÄêÀ´Ê×ÓöÀä</a></li>
-			<li><a href="###">Î÷Õþ¡°ÃÈÕÐÆ¸¡±Ðã³öÀ±½·ÓëÃÀÅ®±»ÔÞ</a></li>
+			<li class="shouye"><a href="index.html">é¦–é¡µ</a></li>
+			<li><a href="">å­¦æ— æ­¢å¢ƒ</a></li>
+			<li><a href="">webå‰ç«¯</a></li>
+			<li><a href="">æ…¢ç”Ÿæ´»</a></li>
+			<li><a href="">ç¢Žè¨€ç¢Žè¯­</a></li>
+			<li><a href="">å…³äºŽæˆ‘</a></li>
+			<li><a href="">ç•™è¨€</a></li>
 		</ul>
-		<h2>½ÌÓý²©ÎÄ2</h2>
-		<ul>
-			<li><a href="###">¿¿×Ô¼º95 ºóÅ®Éú±»16 Ëù¹úÍâÃûÐ£Â¼È¡</a></li>
-			<li><a href="###">00 ºóµÄ³É³¤·³ÄÕ£ºÑ¹Á¦¾Þ´ó³ÉÒþÐÎÉ±ÊÖ</a></li>
-			<li><a href="###">Ò»Äê×ÔÑ§MIT µÄ33 ÃÅ¿Î? ·è¿ñÑ§Ï°·½·¨</a></li>
-			<li><a href="###">ÉêÇë¸°ÃÀ¶ÁÑÐÈËÊýÏÂ½µ5% 7 ÄêÀ´Ê×ÓöÀä</a></li>
-			<li><a href="###">Î÷Õþ¡°ÃÈÕÐÆ¸¡±Ðã³öÀ±½·ÓëÃÀÅ®±»ÔÞ</a></li>
-		</ul>
-		<h2>½ÌÓý²©ÎÄ3</h2>
-		<ul>
-			<li><a href="###">¿¿×Ô¼º95 ºóÅ®Éú±»16 Ëù¹úÍâÃûÐ£Â¼È¡</a></li>
-			<li><a href="###">00 ºóµÄ³É³¤·³ÄÕ£ºÑ¹Á¦¾Þ´ó³ÉÒþÐÎÉ±ÊÖ</a></li>
-			<li><a href="###">Ò»Äê×ÔÑ§MIT µÄ33 ÃÅ¿Î? ·è¿ñÑ§Ï°·½·¨</a></li>
-			<li><a href="###">ÉêÇë¸°ÃÀ¶ÁÑÐÈËÊýÏÂ½µ5% 7 ÄêÀ´Ê×ÓöÀä</a></li>
-			<li><a href="###">Î÷Õþ¡°ÃÈÕÐÆ¸¡±Ðã³öÀ±½·ÓëÃÀÅ®±»ÔÞ</a></li>
-		</ul>
-	</div>
-	<div id="index">
-		
 	</div>
 	<div id="banner">
-		<img src="images/banner1.jpg" alt="ÂÖ²¥Æ÷µÚÒ»ÕÅ" />
-		<img src="images/banner2.jpg" alt="ÂÖ²¥Æ÷µÚ¶þÕÅ" />
-		<img src="images/banner3.jpg" alt="ÂÖ²¥Æ÷µÚÈýÕÅ" />
-		<ul>
-			<li>¡ñ</li>
-			<li>¡ñ</li>
-			<li>¡ñ</li>
-		</ul>
-		<span></span>
-		<strong></strong>
+		<div class="left">
+			<div class="left-inner">
+				<a href=""><img src="./images/page1_swiper1.jpg"></a>
+				<a href=""><img src="./images/page1_swiper2.jpg"></a>
+				<a href=""><img src="./images/page1_swiper3.jpg"></a>
+				<a href=""><img src="./images/page1_swiper4.jpg"></a>
+				<a href=""><img src="./images/page1_swiper5.jpg"></a>
+				
+			</div>
+			<div class="panagation">
+				<img src="./images/page1_swiper1.jpg">
+				<img src="./images/page1_swiper2.jpg">
+				<img src="./images/page1_swiper3.jpg">
+				<img src="./images/page1_swiper4.jpg">
+				<img src="./images/page1_swiper5.jpg">
+
+			</div>
+		</div>
+		
+		<div class="right">
+			<img src="./images/page1_banner.jpg">
+		</div>
 	</div>
-	<div id="photo">
-		<dl>
-			<dt><img xsrc="images/p1.jpg" bigsrc="images/p1big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-
-		<dl>
-			<dt><img xsrc="images/p2.jpg" bigsrc="images/p2big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p3.jpg" bigsrc="images/p3big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p4.jpg" bigsrc="images/p4big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p5.jpg" bigsrc="images/p5big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p6.jpg" bigsrc="images/p6big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-
-		<dl>
-			<dt><img xsrc="images/p7.jpg" bigsrc="images/p7big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p8.jpg" bigsrc="images/p8big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p9.jpg" bigsrc="images/p9big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p10.jpg" bigsrc="images/p10big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p11.jpg" bigsrc="images/p11big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-		
-		<dl>
-			<dt><img xsrc="images/p12.jpg" bigsrc="images/p12big.jpg" src="images/wait_load.jpg" class="wait_load" alt="" /></dt>
-			<dd>ÑÓ³Ù¼ÓÔØÍ¼Æ¬</dd>
-		</dl>
-
-		
-	</div>
-	
-	<div id="footer">
-		<p>Æ°³ÇWeb¾ãÀÖ²¿ http://www.ycku.com</p>
-		<p>CopyRight All Reset. xxx ËÕ±¸°¸ºÅ£º123456</p>
-	</div>
-</div>
-
-<div id="share">
-	<h2>·ÖÏíµ½</h2>
-	<ul>
-		<li><a href="###" class="a">Ò»¼ü·ÖÏí</a></li>
-		<li><a href="###" class="b">ÐÂÀËÎ¢²©</a></li>
-		<li><a href="###" class="c">ÈËÈËÍø</a></li>
-		<li><a href="###" class="d">°Ù¶ÈÏà²á</a></li>
-		<li><a href="###" class="e">ÌÚÑ¶ÅóÓÑ</a></li>
-		<li><a href="###" class="f">¶¹°êÍø</a></li>
-		<li><a href="###" class="g">°Ù¶ÈÐÂÊ×Ò³</a></li>
-		<li><a href="###" class="h">ºÍÑ¶Î¢²©</a></li>
-		<li><a href="###" class="i">QQ ¿Õ¼ä</a></li>
-		<li><a href="###" class="j">°Ù¶ÈËÑ²Ø</a></li>
-		<li><a href="###" class="k">ÌÚÑ¶Î¢²©</a></li>
-		<li><a href="###" class="l">¿ªÐÄÍø</a></li>
-		<li><a href="###" class="m">°Ù¶ÈÌù°É</a></li>
-		<li><a href="###" class="n">ËÑºüÎ¢²©</a></li>
-		<li><a href="###" class="o">QQ ºÃÓÑ</a></li>
-		<li><a href="###" class="p">¸ü¶à...</a></li>
-	</ul>
-	<div class="share_footer"><a href="###">°Ù¶È·ÖÏí</a><span></span></div>
-</div>
-
-<div id="photo_big">
-	<h2><img src="images/close.png" alt="" class="close" />Í¼Æ¬Ô¤¼ÓÔØ</h2>
-	<div class="big">
-		<img src="images/loading.gif" alt="" />
-		<strong class="sl">&lt;</strong>
-		<strong class="sr">&gt;</strong>
-		<span class="left"></span>
-		<span class="right"></span>
-		<em class="index"></em>
-	</div>
-</div>
-
-<div id="loading">
-	<p>¼ÓÔØÖÐ</p>
-</div>
-
-<div id="success">
-	<p>³É¹¦</p>
-</div>
-
-<div id="screen"></div>
-
-<div id="test" style="clear:both;"></div>
-
+	<div id="main">de</div>
+	<div id="footer">de</div>
 </body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
