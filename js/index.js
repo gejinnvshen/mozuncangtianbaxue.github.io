@@ -32,6 +32,23 @@ $(document).ready(function(){
 		banner_index++;
 	}
 
+
+	//个人中心
+	$('#personal .member').hover(function(){
+		//alert('de')
+		$('#personal .person').show();
+	},function(){
+		$('#personal .person').hide();
+	})
+
+	//拖拽
+
+	$('#blog .submit').click(function(){
+	var a=$('#blog form dd .title').val();
+		$('#main .content p').html(a);	
+		alert(a);
+	})
+	$.ajax(alert('dd'));
 })
 
 
