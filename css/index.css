@@ -21,6 +21,9 @@ body{
 #personal .reg{
 	cursor:pointer;
 }
+#personal .login{
+	cursor:pointer;
+}
 #zhuce{
 	z-index: 9999;
 	position:absolute;
@@ -39,6 +42,7 @@ body{
 	position:absolute;
 	left:480px;
 	top:7px;
+	cursor: pointer;
 }
 #zhuce form dl{
 	margin:30px 50px;
@@ -64,6 +68,7 @@ body{
 	position:absolute;
 	left:480px;
 	top:7px;
+	cursor: pointer;
 }
 #login form dl{
 	margin:30px 50px;
@@ -88,6 +93,7 @@ body{
 	position:absolute;
 	left:480px;
 	top:7px;
+	cursor: pointer;
 }
 #blog form dl{
 	margin:30px 40px;

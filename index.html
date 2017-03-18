@@ -5,8 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/ajax.js"></script>
 	<!-- 百度分享 -->
 	<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"2","bdPos":"left","bdTop":"201.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 	</script>
@@ -59,17 +59,17 @@
 		</h2>
 		<form name="login">
 			<dl>
-				<dd>账 号：<input type="text" name="content" /></dd>
+				<dd>账 号：<input type="text" name="" /></dd>
 				<dd>密 码：<input type="password" name="user" /></dd>
 				<dd><input type="button" name="sub" value="登录" class="submit" style="width:30px"></dd>
 			</dl>
-		</form>				
+		</form>
 	</div>
-	<div id="blog">
+	<div id="blog" style="display: none;">
 		<h2>发表博文
 			<img src="./images/close.png">
 		</h2>
-		<form action="one.php" method="post"  name="blog">	
+		<form>	
 			<dl>
 				<dd>标&nbsp;&nbsp;题： <input type="text" name="title"  class="title"/></dd>
 				<dd>
