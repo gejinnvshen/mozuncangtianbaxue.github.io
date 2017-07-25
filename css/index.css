@@ -142,7 +142,7 @@ body{
 	border-radius:5px;
 	clear:left;
 }
-.logo{
+#header .logo{
 	width:500px;
 	height: 132px;
 	float:left;
@@ -191,6 +191,7 @@ body{
 }
 #nav ul li:hover{
 	background:#FF8888;
+
 }
 #nav ul li a{
 	color:#fff;
@@ -268,13 +269,35 @@ body{
 	background: #ccc;
 	text-indent:10px;
 }
-#main .main-left .content .clearfix p{
+#main .main-left .content .clearfix .neirong{
 	height:160px;
 	padding-top:10px;
 	background:pink;
 	text-indent: 20px;
+	overflow: hidden; 
 }
-
+#main .main-left .content .clearfix .zuo{
+	width:150px;
+	height:120px;
+	background: yellow; 
+	float:left;
+}
+#main .main-left .content .clearfix .you{
+	width:450px;
+	height:120px;
+	background:blue;
+	float:left;
+	clear:right;    /* 右边就不能浮动别的元素了*/ 
+}
+#main .main-left .content .clearfix .you p{
+	width:450px;
+	height:70px;
+	background: red;
+}
+#main .main-left .content .clearfix .you a{
+	margin:20px 0 0 350px;
+	display: block;
+}
 #main .main-right{
 	width:300px;
 	background:green;
@@ -288,6 +311,12 @@ body{
 	text-align:center;
 	line-height: 50px;
 	margin-left:15px;
+	    
+}
+#main .main-right .m_nav li:hover{
+	-webkit-transition:all 1s ease-in-out;
+	-webkit-transform:rotate(360deg) scale(1,1);
+	
 }
 #main .main-right .m_nav .nav1{
 	margin-bottom:20px;
@@ -327,6 +356,10 @@ body{
 	height:30px;
 	line-height: 30px;
 }
+#main .main-right .tuijian .zhan span{
+	margin-left:190px;
+	background: yellow;
+}
 #main .main-right .click h2{
 	background:yellow;
 	text-indent:10px;
@@ -335,7 +368,17 @@ body{
 	height:30px;
 	line-height: 30px;
 }
-
+#top{
+	width:60px;
+	height:60px;
+	background:url(../images/top.gif);
+	z-index:9999;
+	position: fixed;
+	left:1200px;
+	top:350px;
+	cursor: pointer;
+	
+}
 
 
 

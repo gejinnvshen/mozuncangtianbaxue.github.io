@@ -1,0 +1,90 @@
+#header{
+	height:30px;
+	background: red;
+}
+#header .first{
+	background: blue;
+
+}
+#header .first li{
+	float:right;
+	line-height: 30px;
+	margin:0 2px;
+	background: yellow;
+	cursor:pointer;
+}
+#main{
+	background:pink;
+	width:1200px;
+	height:500px;
+}
+#main .left{
+	width:100px;
+	background:yellow;
+	float:left;
+}
+#main .left .second li{
+	text-align: center;
+	background:blue;
+	margin:5px 0;
+	width:80px;
+	height:40px;
+	line-height:40px;
+	cursor:pointer;
+}
+#main .second li a{
+	text-decoration:none;
+}
+#main .right{
+	width:1000px;
+	background:green;
+	float:left;
+}
+#main .article-right{
+	height: 400px;
+	width:1100px;
+	background: green;
+	float:left;
+}
+#main .article-right p{
+	text-align: center;
+	height:20px;
+	line-height: 20px;
+	background: red;
+}
+#main .article-right form dl dd .title{
+	height: 30px;
+	width:300px;
+}
+#main .article-right form dl dd textarea{
+	height: 250px;
+	width:500px;
+}
+#main .article-right form dl dd .submit{
+	width:100px;
+	height: 30px;
+	margin-left:67px;
+	margin-top:20px;
+	background:url(../images/blog_button.png);
+}
+form #up_btn input{
+	position: relative;
+    border: solid transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    z-index: 3;
+}
+form #up_btn span{
+	background:#53AD3F;
+	cursor: pointer; 
+	position:relative;
+	left:-200px;
+	z-index: 1;
+}
+
+
+
+
+
+
